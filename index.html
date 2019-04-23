@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name='viewport' content='width = device-width, initial-scale = 1'>
+	<title>EduardoMorales@MySQL</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">Database Management's Library - EduardoMorales@MySQL</a>
+		<input id="searchTextBox">
+		<button id="search" onclick="search()">SEARCH</button>
+		<button id="reset" onclick="location.href='http://localhost:8080/newItem'">NEW ITEM</button>
+	</nav>
+
+	<nav>
+		<h6 style='color:dodgerblue'><b>1. Deleting an item will only delete that specific copy.</b></h6>
+		<h6 style='color:dodgerblue'><b>2. Editing any name will alter another copy's name.</b></h6>
+		<h6 style='color:red'><b>3. You don't have sudo priviledges to edit IDs. These incidents will be
+				reported.</b></h6>
+
+		<button id="all" onclick="location.href='http://localhost:8080/'">ALL</button>
+		<button id="author" onclick="getTable('Author')">AUTHOR</button>
+		<button id="book" onclick="getTable('Book')">BOOK</button>
+		<button id="branch" onclick="getTable('Branch')">BRANCH</button>
+		<button id="copy" onclick="getTable('Copy')">COPY</button>
+		<button id="publisher" onclick="getTable('Publisher')">PUBLISHER</button>
+		<button id="wrote" onclick="getTable('Wrote')">WROTE</button>
+		<button id="inventory" onclick="getTable('Inventory')">INVENTORY</button>
+	</nav>
+
+	<table class="table table-hover">
+		<thead>
+			<tr id='columns'>
+			</tr>
+		</thead>
+		<tbody id='table'>
+		</tbody>
+	</table>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
+	<script src='index.js'></script>
+
+</body>
+
+</html>
